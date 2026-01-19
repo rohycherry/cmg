@@ -1,10 +1,4 @@
-# All crawlers are allowed to crawl the main site
 User-agent: *
-Disallow:
-
-# Prevent crawling of potential sensitive folders (যদি থাকে)
-Disallow: /admin/
-Disallow: /private/
-
-# Sitemap location
+Disallow: /404.html
+Allow: /
 Sitemap: https://clashmarketglobal.com/sitemap.xml
