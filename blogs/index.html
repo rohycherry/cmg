@@ -231,6 +231,11 @@
       display: flex;
       flex-wrap: wrap;
       overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .featured:hover {
+      transform: translateY(-3px);
     }
     .featured-icon {
       flex: 0 0 120px;
@@ -267,7 +272,6 @@
       color: #3b82f6;
       font-weight: 500;
       font-size: 13px;
-      cursor: pointer;
     }
 
     /* Pagination */
@@ -288,57 +292,6 @@
     .page-btn.active, .page-btn:hover {
       background: #3b82f6;
       border-color: #3b82f6;
-    }
-
-    /* Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.95);
-      z-index: 1000;
-      overflow-y: auto;
-    }
-    .modal-box {
-      max-width: 800px;
-      margin: 50px auto;
-      background: #0f0f13;
-      border: 1px solid #334155;
-      border-radius: 20px;
-      position: relative;
-    }
-    .modal-close {
-      position: absolute;
-      right: 20px;
-      top: 15px;
-      background: #1e293b;
-      border: none;
-      color: white;
-      font-size: 24px;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      cursor: pointer;
-    }
-    .modal-body {
-      padding: 30px;
-    }
-    .modal-body h1 {
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
-    .modal-body h2 {
-      color: #3b82f6;
-      margin: 20px 0 10px;
-      font-size: 20px;
-    }
-    .modal-body p {
-      color: #cbd5e1;
-      margin-bottom: 15px;
-      line-height: 1.7;
     }
     .no-results {
       text-align: center;
@@ -390,12 +343,6 @@
     @media (max-width: 480px) {
       .blog-hero h1 {
         font-size: 28px;
-      }
-      .hero h1 {
-        font-size: 28px;
-      }
-      .modal-body {
-        padding: 20px;
       }
     }
   </style>
@@ -489,104 +436,96 @@
   </div>
 </footer>
 
-<!-- Modal -->
-<div id="modal" class="modal">
-  <div class="modal-box">
-    <button class="modal-close" id="closeModalBtn">×</button>
-    <div class="modal-body" id="modalBody"></div>
-  </div>
-</div>
-
 <script>
-  // Blog Data
+  // Blog Data - Each post has a separate HTML file link
   const posts = [
     {
       id: 1,
       title: "How to Buy COC Accounts Safely",
-      excerpt: "Step by step guide to buy Clash of Clans accounts using CMG escrow service. Learn the complete process.",
-      content: "<h2>Why Use Escrow?</h2><p>Escrow protects both buyer and seller. You send payment to CMG, we hold it until you receive and verify the account.</p><h2>Step by Step Process:</h2><p>1. Find account in our Telegram channel<br>2. Contact official middleman @rohycherry<br>3. Send payment to CMG escrow<br>4. Receive account details from seller<br>5. Verify the account is correct<br>6. CMG releases payment to seller</p><h2>Safety Tips</h2><p>Always verify you're dealing with the real @rohycherry. Never trade outside CMG escrow.</p>",
+      excerpt: "Step by step guide to buy Clash of Clans accounts using CMG escrow service.",
       category: "Trading",
       date: "Mar 28, 2026",
       readTime: "3 min read",
       icon: "🛡️",
-      featured: true
+      featured: true,
+      filename: "post-how-to-buy-coc-safely.html"
     },
     {
       id: 2,
       title: "5 Signs of Fake COC Sellers",
       excerpt: "Learn to identify scammers and protect your money while trading Clash of Clans accounts.",
-      content: "<h2>Red Flags to Watch For</h2><p><strong>1. Prices too good to be true</strong> - Maxed TH15 for $50 is definitely a scam.</p><p><strong>2. Refuses escrow service</strong> - Legitimate sellers always accept CMG escrow.</p><p><strong>3. Fake middleman profiles</strong> - Only @rohycherry is official.</p><p><strong>4. Asks for payment first without proof</strong> - Never pay directly to seller.</p><p><strong>5. Rushes you to decide</strong> - Scammers create urgency.</p><h2>Stay Safe</h2><p>Always verify middleman is @rohycherry. Never deal outside CMG escrow.</p>",
       category: "Security",
       date: "Mar 25, 2026",
       readTime: "4 min read",
       icon: "⚠️",
-      featured: false
+      featured: false,
+      filename: "post-fake-coc-sellers.html"
     },
     {
       id: 3,
       title: "How CMG Escrow Works",
       excerpt: "Behind the scenes of our secure transaction system. Learn how we protect both buyers and sellers.",
-      content: "<h2>Our Process</h2><p>CMG acts as a neutral third party. Buyer pays us, we hold funds, seller transfers account, buyer confirms, we pay seller.</p><h2>Why Trust CMG?</h2><p>We've completed hundreds of successful trades with verified proof available in our Telegram channel.</p><h2>No Hidden Fees</h2><p>Our fee structure is transparent - typically 5-10% depending on transaction value.</p>",
       category: "Guide",
       date: "Mar 20, 2026",
       readTime: "2 min read",
       icon: "🔒",
-      featured: false
+      featured: false,
+      filename: "post-cmg-escrow-works.html"
     },
     {
       id: 4,
       title: "TH16 Update & Account Values",
       excerpt: "How the latest Clash of Clans update affects COC account prices and trading market.",
-      content: "<h2>New Content Added</h2><p>TH16 brings new defenses, hero levels, and troops. Maxed accounts are now worth significantly more.</p><h2>Market Impact</h2><p>Expect prices to rise for accounts with TH16 progress. Sellers should update their listings.</p><h2>What Buyers Should Know</h2><p>Accounts with TH16 content will command premium prices. Act fast if you see a good deal.</p>",
       category: "News",
       date: "Mar 18, 2026",
       readTime: "3 min read",
       icon: "🏰",
-      featured: true
+      featured: true,
+      filename: "post-th16-update-account-values.html"
     },
     {
       id: 5,
       title: "Sell Your COC Account - Best Tips",
       excerpt: "Get maximum value when selling your Clash of Clans account. Tips for pricing and listing.",
-      content: "<h2>Preparation</h2><p>Take clear screenshots of your base, heroes, troops, and resources. List all important details including Town Hall level, hero levels, and magic items.</p><h2>Pricing Strategy</h2><p>Research similar accounts on our Telegram channel. Price competitively based on TH level and progress percentage.</p><h2>Working with CMG</h2><p>Our middleman ensures you get paid safely after transferring the account to buyer.</p>",
       category: "Trading",
       date: "Mar 15, 2026",
       readTime: "3 min read",
       icon: "💰",
-      featured: false
+      featured: false,
+      filename: "post-sell-coc-best-tips.html"
     },
     {
       id: 6,
       title: "Clash Royale Trading Guide",
       excerpt: "Everything you need to know about buying and selling Clash Royale accounts safely with CMG.",
-      content: "<h2>CR Account Value Factors</h2><p>Card levels, King Tower level, emotes, and magic items all affect account value.</p><h2>Safe Transfer Process</h2><p>Supercell ID transfer is the safest method. CMG verifies everything before releasing payment.</p><h2>Common Scams in CR Trading</h2><p>Watch out for fake screenshots and account recovery scams. Always use CMG escrow.</p>",
       category: "Guide",
       date: "Mar 10, 2026",
       readTime: "2 min read",
       icon: "👑",
-      featured: false
+      featured: false,
+      filename: "post-clash-royale-trading-guide.html"
     },
     {
       id: 7,
       title: "Avoid Account Recovery Scams",
       excerpt: "Protect yourself after buying an account. Learn how scammers try to take accounts back.",
-      content: "<h2>How Recovery Scams Happen</h2><p>The original owner uses email recovery or Supercell support to take the account back after selling it.</p><h2>CMG Protection</h2><p>We verify all recovery options are removed before payment release. This includes email disconnection and recovery questions.</p><h2>What to Do If Scammed</h2><p>Contact CMG immediately with proof. We keep records of all transactions.</p>",
       category: "Security",
       date: "Mar 5, 2026",
       readTime: "4 min read",
       icon: "🚨",
-      featured: false
+      featured: false,
+      filename: "post-avoid-recovery-scams.html"
     },
     {
       id: 8,
       title: "CMG Telegram Channel Guide",
       excerpt: "How to use our Telegram channel for safe trading. Find accounts and contact middleman.",
-      content: "<h2>Join Our Channel</h2><p>Telegram link: t.me/cmgTrade1</p><h2>How It Works</h2><p>Browse account listings, contact middleman @rohycherry, and start a secure trade with escrow protection.</p><h2>What You'll Find</h2><p>COC accounts of all TH levels, Clash Royale accounts, transaction proofs, and customer reviews.</p>",
       category: "Guide",
       date: "Feb 28, 2026",
       readTime: "2 min read",
       icon: "📱",
-      featured: false
+      featured: false,
+      filename: "post-cmg-telegram-guide.html"
     }
   ];
 
@@ -605,18 +544,23 @@
     });
   }
 
+  // Open post in new blank page
+  function openPost(filename) {
+    window.open(filename, '_blank');
+  }
+
   function renderFeatured() {
     const featuredPost = posts.find(p => p.featured === true);
     const container = document.getElementById('featuredContainer');
     if (featuredPost) {
       container.innerHTML = `
-        <div class="featured">
+        <div class="featured" onclick="openPost('${featuredPost.filename}')">
           <div class="featured-icon">${featuredPost.icon}</div>
           <div class="featured-content">
             <span class="featured-badge">⭐ FEATURED ARTICLE</span>
             <h2 class="featured-title">${featuredPost.title}</h2>
             <p class="featured-excerpt">${featuredPost.excerpt}</p>
-            <span class="read-link" onclick="openPost(${featuredPost.id})">Read full article →</span>
+            <span class="read-link">Read full article →</span>
           </div>
         </div>
       `;
@@ -639,7 +583,7 @@
     }
 
     grid.innerHTML = pagePosts.map(post => `
-      <div class="blog-card" onclick="openPost(${post.id})">
+      <div class="blog-card" onclick="openPost('${post.filename}')">
         <div class="card-img">${post.icon}</div>
         <div class="card-content">
           <span class="category">${post.category}</span>
@@ -658,23 +602,6 @@
       paginationHtml += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="goToPage(${i})">${i}</button>`;
     }
     document.getElementById('pagination').innerHTML = paginationHtml;
-  }
-
-  function openPost(id) {
-    const post = posts.find(p => p.id === id);
-    const modal = document.getElementById('modal');
-    const modalBody = document.getElementById('modalBody');
-    modalBody.innerHTML = `
-      <div style="text-align:center; font-size: 60px; margin-bottom: 15px;">${post.icon}</div>
-      <h1>${post.title}</h1>
-      <div style="color:#64748b; margin-bottom: 20px; font-size: 13px;">📅 ${post.date} • ⏱️ ${post.readTime} • 🏷️ ${post.category}</div>
-      ${post.content}
-      <div style="margin-top: 30px; padding: 15px; background: #1e293b; border-radius: 12px;">
-        <p style="margin:0;"><strong>🔒 Need help?</strong> Contact official middleman: <span style="color:#3b82f6;">@rohycherry</span> on Telegram</p>
-      </div>
-    `;
-    modal.style.display = 'block';
-    document.body.style.overflow = 'hidden';
   }
 
   function goToPage(page) {
@@ -697,19 +624,6 @@
       currentPage = 1;
       renderBlogs();
     });
-  });
-
-  document.getElementById('closeModalBtn').addEventListener('click', () => {
-    document.getElementById('modal').style.display = 'none';
-    document.body.style.overflow = 'auto';
-  });
-
-  window.addEventListener('click', (e) => {
-    const modal = document.getElementById('modal');
-    if (e.target === modal) {
-      modal.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    }
   });
 
   renderFeatured();
