@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blogs - Clash Market Global | COC Trading Tips & News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Read latest blogs about Clash of Clans account trading, safety tips, and CMG updates.">
+  <meta name="keywords" content="clash of clans blog, coc trading tips, cmg updates, clash royale news">
+  <link rel="canonical" href="https://clashmarketglobal.com/blogs.html">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <script data-goatcounter="https://clashmarketglobal.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+  <style>
+    /* BASE - Complete same as main page */
+    body{
+      margin:0;
+      font-family:'Segoe UI', system-ui, -apple-system, sans-serif;
+      background:#0f0f13;
+      color:#ffffff;
+      overflow-x: hidden;
+    }
+    a{text-decoration:none}
+    .container{width:90%;max-width:1100px;margin:auto}
+
+    /* HEADER - Exact same */
+    .main-header{
+      background:#0f0f13;
+      border-bottom:1px solid #1e293b;
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+    .header-flex{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:15px 0;
+      flex-wrap:wrap;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+    .brand-logo{
+      width:46px;
+      height:46px;
+      object-fit:contain;
+    }
+    .brand-text{
+      display:flex;
+      flex-direction:column;
+    }
+    .brand-name{
+      font-size:18px;
+      font-weight:600;
+      color:#3b82f6;
+    }
+    .brand-short{
+      font-size:12px;
+      color:#94a3b8;
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      gap:25px;
+      flex-wrap:wrap;
+    }
+    .nav a{
+      color:#cbd5e1;
+      font-size:15px;
+      transition:0.3s;
+    }
+    .nav a:hover{color:#3b82f6}
+    .nav-btn{
+      padding:10px 22px;
+      background:#3b82f6;
+      color:#ffffff !important;
+      font-weight:600;
+      border-radius:8px;
+    }
+    .nav-btn:hover{
+      background:#2563eb;
+    }
+    .about-btn {
+      background: transparent;
+      border: 2px solid #10b981;
+      color: #10b981 !important;
+    }
+    .about-btn:hover {
+      background: rgba(16, 185, 129, 0.1);
+    }
+
+    /* Blog Hero */
+    .blog-hero {
+      padding: 60px 0 40px;
+      text-align: center;
+      background: linear-gradient(180deg, #0f0f13 0%, #111827 100%);
+    }
+    .blog-hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 16px;
+    }
+    .blog-hero p {
+      color: #94a3b8;
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Search & Filter */
+    .search-section {
+      padding: 20px 0;
+      background: #111827;
+      border-bottom: 1px solid #1e293b;
+    }
+    .search-input {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      display: block;
+      padding: 12px 20px;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 40px;
+      color: white;
+      font-size: 16px;
+    }
+    .search-input:focus {
+      outline: none;
+      border-color: #3b82f6;
+    }
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 25px 0 30px;
+    }
+    .filter-btn {
+      background: #1e293b;
+      border: 1px solid #334155;
+      padding: 6px 18px;
+      border-radius: 30px;
+      color: #cbd5e1;
+      font-size: 13px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: #3b82f6;
+      border-color: #3b82f6;
+      color: white;
+    }
+
+    /* Blog Grid */
+    .blog-grid-section {
+      padding: 40px 0;
+    }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 25px;
+      margin: 30px 0;
+    }
+    .blog-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .blog-card:hover {
+      transform: translateY(-4px);
+      border-color: #3b82f6;
+    }
+    .card-img {
+      height: 130px;
+      background: linear-gradient(135deg, #2d3a5e, #1e293b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 50px;
+    }
+    .card-content {
+      padding: 20px;
+    }
+    .category {
+      display: inline-block;
+      background: rgba(59, 130, 246, 0.2);
+      color: #3b82f6;
+      font-size: 11px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    .card-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .card-excerpt {
+      color: #94a3b8;
+      font-size: 13px;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+    .card-meta {
+      color: #64748b;
+      font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 12px;
+      border-top: 1px solid #334155;
+    }
+
+    /* Featured Post */
+    .featured-section {
+      margin: 30px 0 20px;
+    }
+    .featured {
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      border: 1px solid #3b82f6;
+      border-radius: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+    .featured-icon {
+      flex: 0 0 120px;
+      background: #3b82f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 55px;
+    }
+    .featured-content {
+      flex: 1;
+      padding: 25px;
+    }
+    .featured-badge {
+      background: #10b981;
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .featured-title {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+    .featured-excerpt {
+      color: #94a3b8;
+      font-size: 14px;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+    .read-link {
+      color: #3b82f6;
+      font-weight: 500;
+      font-size: 13px;
+      cursor: pointer;
+    }
+
+    /* Pagination */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin: 40px 0;
+    }
+    .page-btn {
+      background: #1e293b;
+      border: 1px solid #334155;
+      padding: 8px 14px;
+      border-radius: 8px;
+      color: #cbd5e1;
+      cursor: pointer;
+    }
+    .page-btn.active, .page-btn:hover {
+      background: #3b82f6;
+      border-color: #3b82f6;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 1000;
+      overflow-y: auto;
+    }
+    .modal-box {
+      max-width: 800px;
+      margin: 50px auto;
+      background: #0f0f13;
+      border: 1px solid #334155;
+      border-radius: 20px;
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      background: #1e293b;
+      border: none;
+      color: white;
+      font-size: 24px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .modal-body {
+      padding: 30px;
+    }
+    .modal-body h1 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+    .modal-body h2 {
+      color: #3b82f6;
+      margin: 20px 0 10px;
+      font-size: 20px;
+    }
+    .modal-body p {
+      color: #cbd5e1;
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+    .no-results {
+      text-align: center;
+      padding: 60px;
+      color: #64748b;
+    }
+
+    /* FOOTER - Exact same as main page */
+    .footer {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 40px 20px;
+    }
+    .footer-bottom {
+      text-align: center;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .footer-links a {
+      color: #94a3b8;
+      font-size: 12px;
+      transition: 0.3s;
+    }
+    .footer-links a:hover {
+      color: #3b82f6;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        justify-content: center;
+        margin-top: 15px;
+      }
+      .blog-hero h1 {
+        font-size: 32px;
+      }
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+      .featured-icon {
+        flex: 0 0 80px;
+        font-size: 40px;
+      }
+    }
+    @media (max-width: 480px) {
+      .blog-hero h1 {
+        font-size: 28px;
+      }
+      .hero h1 {
+        font-size: 28px;
+      }
+      .modal-body {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER - Exactly same as main page -->
+<header class="main-header">
+<div class="container header-flex">
+  <div class="brand">
+    <img src="logo.png" alt="CMG Logo" class="brand-logo">
+    <div class="brand-text">
+      <span class="brand-name">CLASH MARKET GLOBAL</span>
+      <span class="brand-short">CMG</span>
+    </div>
+  </div>
+  <nav class="nav">
+    <a href="/#how">How It Works</a>
+    <a href="/#middleman">Middleman</a>
+    <a href="/#about" class="nav-btn about-btn">About Us</a>
+    <a href="https://t.me/cmgTrade1" class="nav-btn" target="_blank" rel="noopener noreferrer">Buy Now</a>
+  </nav>
+</div>
+</header>
+
+<!-- Blog Hero -->
+<section class="blog-hero">
+  <div class="container">
+    <h1>📖 CMG Blogs</h1>
+    <p>Tips, guides & updates for safe Clash of Clans account trading</p>
+  </div>
+</section>
+
+<!-- Search & Filter -->
+<section class="search-section">
+  <div class="container">
+    <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search articles...">
+    
+    <div class="filters" id="filterContainer">
+      <button class="filter-btn active" data-cat="all">All</button>
+      <button class="filter-btn" data-cat="Trading">Trading</button>
+      <button class="filter-btn" data-cat="Security">Security</button>
+      <button class="filter-btn" data-cat="Guide">Guides</button>
+      <button class="filter-btn" data-cat="News">News</button>
+    </div>
+  </div>
+</section>
+
+<!-- Main Content -->
+<section class="blog-grid-section">
+  <div class="container">
+    <div id="featuredContainer" class="featured-section"></div>
+    <div id="blogGrid" class="blog-grid"></div>
+    <div id="pagination" class="pagination"></div>
+  </div>
+</section>
+
+<!-- FOOTER - Exactly same as main page -->
+<footer style="background:#0f172a; color:#94a3b8; padding:40px 20px; font-family:Arial, sans-serif;">
+  <div class="footer-bottom">
+    <p style="color:#94a3b8; margin:0 0 15px; font-size:14px;">
+      © 2026 <span style="color:#3b82f6; font-weight:600;">CLASH MARKET GLOBAL (CMG)</span> | All Rights Reserved
+    </p>
+    <p style="color:#94a3b8; margin:0 0 15px; font-size:12px; max-width:800px; margin-left:auto; margin-right:auto; line-height:1.6;">
+      Clash Market Global (CMG) is an independent digital trading platform.
+      We provide a neutral middleman escrow service to reduce fraud risks.
+      All trades are conducted at the user's own responsibility.
+    </p>
+    <p style="color:#94a3b8; margin:0 0 15px; font-size:12px;">
+      📍 <strong>Address:</strong> Beijing, China <br>
+      ✉️ <strong>Email:</strong>
+      <a href="mailto:support@clashmarketglobal.com" style="color:#3b82f6;">
+        support@clashmarketglobal.com
+      </a>
+    </p>
+    <div class="footer-links">
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <span style="color:#334155;">•</span>
+      <a href="/terms-of-use.html">Terms of Use</a>
+      <span style="color:#334155;">•</span>
+      <a href="/disclaimer.html">Disclaimer</a>
+      <span style="color:#334155;">•</span>
+      <a href="/refund-policy.html">Refund Policy</a>
+      <span style="color:#334155;">•</span>
+      <a href="/knowledge-base.html">Knowledge Base</a>
+      <span style="color:#334155;">•</span>
+      <a href="mailto:rohycherry@clashmarketglobal.com">Contact Support</a>
+      <span style="color:#334155;">•</span>
+      <a href="/blogs.html">Blogs</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-box">
+    <button class="modal-close" id="closeModalBtn">×</button>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+  // Blog Data
+  const posts = [
+    {
+      id: 1,
+      title: "How to Buy COC Accounts Safely",
+      excerpt: "Step by step guide to buy Clash of Clans accounts using CMG escrow service. Learn the complete process.",
+      content: "<h2>Why Use Escrow?</h2><p>Escrow protects both buyer and seller. You send payment to CMG, we hold it until you receive and verify the account.</p><h2>Step by Step Process:</h2><p>1. Find account in our Telegram channel<br>2. Contact official middleman @rohycherry<br>3. Send payment to CMG escrow<br>4. Receive account details from seller<br>5. Verify the account is correct<br>6. CMG releases payment to seller</p><h2>Safety Tips</h2><p>Always verify you're dealing with the real @rohycherry. Never trade outside CMG escrow.</p>",
+      category: "Trading",
+      date: "Mar 28, 2026",
+      readTime: "3 min read",
+      icon: "🛡️",
+      featured: true
+    },
+    {
+      id: 2,
+      title: "5 Signs of Fake COC Sellers",
+      excerpt: "Learn to identify scammers and protect your money while trading Clash of Clans accounts.",
+      content: "<h2>Red Flags to Watch For</h2><p><strong>1. Prices too good to be true</strong> - Maxed TH15 for $50 is definitely a scam.</p><p><strong>2. Refuses escrow service</strong> - Legitimate sellers always accept CMG escrow.</p><p><strong>3. Fake middleman profiles</strong> - Only @rohycherry is official.</p><p><strong>4. Asks for payment first without proof</strong> - Never pay directly to seller.</p><p><strong>5. Rushes you to decide</strong> - Scammers create urgency.</p><h2>Stay Safe</h2><p>Always verify middleman is @rohycherry. Never deal outside CMG escrow.</p>",
+      category: "Security",
+      date: "Mar 25, 2026",
+      readTime: "4 min read",
+      icon: "⚠️",
+      featured: false
+    },
+    {
+      id: 3,
+      title: "How CMG Escrow Works",
+      excerpt: "Behind the scenes of our secure transaction system. Learn how we protect both buyers and sellers.",
+      content: "<h2>Our Process</h2><p>CMG acts as a neutral third party. Buyer pays us, we hold funds, seller transfers account, buyer confirms, we pay seller.</p><h2>Why Trust CMG?</h2><p>We've completed hundreds of successful trades with verified proof available in our Telegram channel.</p><h2>No Hidden Fees</h2><p>Our fee structure is transparent - typically 5-10% depending on transaction value.</p>",
+      category: "Guide",
+      date: "Mar 20, 2026",
+      readTime: "2 min read",
+      icon: "🔒",
+      featured: false
+    },
+    {
+      id: 4,
+      title: "TH16 Update & Account Values",
+      excerpt: "How the latest Clash of Clans update affects COC account prices and trading market.",
+      content: "<h2>New Content Added</h2><p>TH16 brings new defenses, hero levels, and troops. Maxed accounts are now worth significantly more.</p><h2>Market Impact</h2><p>Expect prices to rise for accounts with TH16 progress. Sellers should update their listings.</p><h2>What Buyers Should Know</h2><p>Accounts with TH16 content will command premium prices. Act fast if you see a good deal.</p>",
+      category: "News",
+      date: "Mar 18, 2026",
+      readTime: "3 min read",
+      icon: "🏰",
+      featured: true
+    },
+    {
+      id: 5,
+      title: "Sell Your COC Account - Best Tips",
+      excerpt: "Get maximum value when selling your Clash of Clans account. Tips for pricing and listing.",
+      content: "<h2>Preparation</h2><p>Take clear screenshots of your base, heroes, troops, and resources. List all important details including Town Hall level, hero levels, and magic items.</p><h2>Pricing Strategy</h2><p>Research similar accounts on our Telegram channel. Price competitively based on TH level and progress percentage.</p><h2>Working with CMG</h2><p>Our middleman ensures you get paid safely after transferring the account to buyer.</p>",
+      category: "Trading",
+      date: "Mar 15, 2026",
+      readTime: "3 min read",
+      icon: "💰",
+      featured: false
+    },
+    {
+      id: 6,
+      title: "Clash Royale Trading Guide",
+      excerpt: "Everything you need to know about buying and selling Clash Royale accounts safely with CMG.",
+      content: "<h2>CR Account Value Factors</h2><p>Card levels, King Tower level, emotes, and magic items all affect account value.</p><h2>Safe Transfer Process</h2><p>Supercell ID transfer is the safest method. CMG verifies everything before releasing payment.</p><h2>Common Scams in CR Trading</h2><p>Watch out for fake screenshots and account recovery scams. Always use CMG escrow.</p>",
+      category: "Guide",
+      date: "Mar 10, 2026",
+      readTime: "2 min read",
+      icon: "👑",
+      featured: false
+    },
+    {
+      id: 7,
+      title: "Avoid Account Recovery Scams",
+      excerpt: "Protect yourself after buying an account. Learn how scammers try to take accounts back.",
+      content: "<h2>How Recovery Scams Happen</h2><p>The original owner uses email recovery or Supercell support to take the account back after selling it.</p><h2>CMG Protection</h2><p>We verify all recovery options are removed before payment release. This includes email disconnection and recovery questions.</p><h2>What to Do If Scammed</h2><p>Contact CMG immediately with proof. We keep records of all transactions.</p>",
+      category: "Security",
+      date: "Mar 5, 2026",
+      readTime: "4 min read",
+      icon: "🚨",
+      featured: false
+    },
+    {
+      id: 8,
+      title: "CMG Telegram Channel Guide",
+      excerpt: "How to use our Telegram channel for safe trading. Find accounts and contact middleman.",
+      content: "<h2>Join Our Channel</h2><p>Telegram link: t.me/cmgTrade1</p><h2>How It Works</h2><p>Browse account listings, contact middleman @rohycherry, and start a secure trade with escrow protection.</p><h2>What You'll Find</h2><p>COC accounts of all TH levels, Clash Royale accounts, transaction proofs, and customer reviews.</p>",
+      category: "Guide",
+      date: "Feb 28, 2026",
+      readTime: "2 min read",
+      icon: "📱",
+      featured: false
+    }
+  ];
+
+  let currentFilter = "all";
+  let currentSearch = "";
+  let currentPage = 1;
+  const postsPerPage = 6;
+
+  function getFilteredPosts() {
+    return posts.filter(post => {
+      const matchFilter = currentFilter === "all" || post.category === currentFilter;
+      const matchSearch = currentSearch === "" || 
+        post.title.toLowerCase().includes(currentSearch.toLowerCase()) ||
+        post.excerpt.toLowerCase().includes(currentSearch.toLowerCase());
+      return matchFilter && matchSearch;
+    });
+  }
+
+  function renderFeatured() {
+    const featuredPost = posts.find(p => p.featured === true);
+    const container = document.getElementById('featuredContainer');
+    if (featuredPost) {
+      container.innerHTML = `
+        <div class="featured">
+          <div class="featured-icon">${featuredPost.icon}</div>
+          <div class="featured-content">
+            <span class="featured-badge">⭐ FEATURED ARTICLE</span>
+            <h2 class="featured-title">${featuredPost.title}</h2>
+            <p class="featured-excerpt">${featuredPost.excerpt}</p>
+            <span class="read-link" onclick="openPost(${featuredPost.id})">Read full article →</span>
+          </div>
+        </div>
+      `;
+    } else {
+      container.innerHTML = '';
+    }
+  }
+
+  function renderBlogs() {
+    const filtered = getFilteredPosts();
+    const totalPages = Math.ceil(filtered.length / postsPerPage);
+    const start = (currentPage - 1) * postsPerPage;
+    const pagePosts = filtered.slice(start, start + postsPerPage);
+    const grid = document.getElementById('blogGrid');
+
+    if (pagePosts.length === 0) {
+      grid.innerHTML = '<div class="no-results">😕 No posts found. Try a different search or category.</div>';
+      document.getElementById('pagination').innerHTML = '';
+      return;
+    }
+
+    grid.innerHTML = pagePosts.map(post => `
+      <div class="blog-card" onclick="openPost(${post.id})">
+        <div class="card-img">${post.icon}</div>
+        <div class="card-content">
+          <span class="category">${post.category}</span>
+          <h3 class="card-title">${post.title}</h3>
+          <p class="card-excerpt">${post.excerpt.substring(0, 100)}${post.excerpt.length > 100 ? '...' : ''}</p>
+          <div class="card-meta">
+            <span>📅 ${post.date}</span>
+            <span>⏱️ ${post.readTime}</span>
+          </div>
+        </div>
+      </div>
+    `).join('');
+
+    let paginationHtml = '';
+    for (let i = 1; i <= totalPages; i++) {
+      paginationHtml += `<button class="page-btn ${i === currentPage ? 'active' : ''}" onclick="goToPage(${i})">${i}</button>`;
+    }
+    document.getElementById('pagination').innerHTML = paginationHtml;
+  }
+
+  function openPost(id) {
+    const post = posts.find(p => p.id === id);
+    const modal = document.getElementById('modal');
+    const modalBody = document.getElementById('modalBody');
+    modalBody.innerHTML = `
+      <div style="text-align:center; font-size: 60px; margin-bottom: 15px;">${post.icon}</div>
+      <h1>${post.title}</h1>
+      <div style="color:#64748b; margin-bottom: 20px; font-size: 13px;">📅 ${post.date} • ⏱️ ${post.readTime} • 🏷️ ${post.category}</div>
+      ${post.content}
+      <div style="margin-top: 30px; padding: 15px; background: #1e293b; border-radius: 12px;">
+        <p style="margin:0;"><strong>🔒 Need help?</strong> Contact official middleman: <span style="color:#3b82f6;">@rohycherry</span> on Telegram</p>
+      </div>
+    `;
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function goToPage(page) {
+    currentPage = page;
+    renderBlogs();
+    window.scrollTo({ top: 400, behavior: 'smooth' });
+  }
+
+  document.getElementById('searchInput').addEventListener('input', (e) => {
+    currentSearch = e.target.value;
+    currentPage = 1;
+    renderBlogs();
+  });
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      currentFilter = btn.dataset.cat;
+      currentPage = 1;
+      renderBlogs();
+    });
+  });
+
+  document.getElementById('closeModalBtn').addEventListener('click', () => {
+    document.getElementById('modal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+  });
+
+  window.addEventListener('click', (e) => {
+    const modal = document.getElementById('modal');
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+  });
+
+  renderFeatured();
+  renderBlogs();
+</script>
+
+</body>
+</html>
