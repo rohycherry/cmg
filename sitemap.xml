@@ -4,73 +4,83 @@
   <!-- Homepage -->
   <url>
     <loc>https://clashmarketglobal.com/</loc>
-    <lastmod>2026-02-01</lastmod>
-    <priority>1.0</priority>
+    <lastmod>2026-04-08</lastmod>
     <changefreq>daily</changefreq>
+    <priority>1.0</priority>
   </url>
 
-  <!-- Blogs -->
+  <!-- Core Pages -->
   <url>
-    <loc>https://clashmarketglobal.com/blogs.html</loc>
-    <lastmod>2026-02-01</lastmod>
-    <priority>0.9</priority>
+    <loc>https://clashmarketglobal.com/index.html</loc>
+    <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
-  <!-- Middleman Details -->
-  <url>
-    <loc>https://clashmarketglobal.com/middleman-details.html</loc>
-    <lastmod>2026-02-01</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-
-  <!-- Knowledge Base -->
   <url>
     <loc>https://clashmarketglobal.com/knowledge-base.html</loc>
-    <lastmod>2026-02-01</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2026-04-08</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
   </url>
 
-  <!-- Privacy Policy -->
+  <url>
+    <loc>https://clashmarketglobal.com/middleman-details.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Sections -->
+  <url>
+    <loc>https://clashmarketglobal.com/blogs/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://clashmarketglobal.com/dealbox/</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Legal Pages -->
   <url>
     <loc>https://clashmarketglobal.com/privacy-policy.html</loc>
     <lastmod>2026-02-01</lastmod>
-    <priority>0.5</priority>
     <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 
-  <!-- Terms of Use -->
   <url>
     <loc>https://clashmarketglobal.com/terms-of-use.html</loc>
     <lastmod>2026-02-01</lastmod>
-    <priority>0.5</priority>
     <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 
-  <!-- Disclaimer -->
   <url>
     <loc>https://clashmarketglobal.com/disclaimer.html</loc>
     <lastmod>2026-02-01</lastmod>
-    <priority>0.5</priority>
     <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 
-  <!-- Refund Policy -->
   <url>
     <loc>https://clashmarketglobal.com/refund-policy.html</loc>
     <lastmod>2026-02-01</lastmod>
-    <priority>0.5</priority>
     <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 
-  <!-- Contact Support -->
+  <!-- 404 Page (Optional but OK) -->
   <url>
-    <loc>https://clashmarketglobal.com/contact.html</loc>
-    <lastmod>2026-02-01</lastmod>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
+    <loc>https://clashmarketglobal.com/404.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>
